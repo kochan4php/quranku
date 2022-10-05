@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Lexend+Deca:100,200,300,regular,500,600,700,800,900");
+
+html,
+body {
+  font-family: "Lexend Deca", Arial, Helvetica, sans-serif !important;
+}
+
+.navbar .navbar-toggler {
+  border: none !important;
+  outline: none !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus,
+.btn:focus,
+.btn:active,
+.btn-close:focus,
+.btn-close:active,
+.form-control:active,
+.form-control:focus,
+.form-select:active,
+.form-select:focus,
+.form-check-input:active,
+.form-check-input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
