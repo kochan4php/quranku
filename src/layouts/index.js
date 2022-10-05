@@ -1,3 +1,5 @@
+import { Container } from "@mui/material";
+
 const { default: Navbar } = require("@/components/Navbar");
 const { default: Head } = require("next/head");
 
@@ -10,7 +12,7 @@ const Layouts = ({ title, children }) => (
       <Navbar />
     </header>
     <main>
-      <div className="container my-4">{children}</div>
+      <Container>{children}</Container>
     </main>
   </>
 );
