@@ -5,7 +5,7 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 
-const Card = () => {
+const CustomCard = () => {
   return (
     <Box sx={{ minWidth: 275 }}>
       <Card variant="outlined">
@@ -29,4 +29,4 @@ const Card = () => {
   );
 };
 
-export default Card;
+export default CustomCard;

@@ -1,6 +1,7 @@
 import { SURAH } from "@/config";
 import Layouts from "@/layouts";
 import axios from "axios";
+import CustomCard from "@/components/CustomCard";
 
 export const getStaticProps = async () => {
   const res = await axios.get(SURAH);
@@ -20,25 +21,13 @@ const Home = ({ data }) => {
     <Layouts title="Beranda">
       <div className="row">
         <div className="col">
-          <div className="card">
-            <div className="card-header">Heade</div>
-            <div className="card-body">Body</div>
-            <div className="card-footer">Footer</div>
-          </div>
+          <CustomCard />
         </div>
         <div className="col">
-          <div className="card">
-            <div className="card-header">Heade</div>
-            <div className="card-body">Body</div>
-            <div className="card-footer">Footer</div>
-          </div>
+          <CustomCard />
         </div>
         <div className="col">
-          <div className="card">
-            <div className="card-header">Heade</div>
-            <div className="card-body">Body</div>
-            <div className="card-footer">Footer</div>
-          </div>
+          <CustomCard />
         </div>
       </div>
     </Layouts>
