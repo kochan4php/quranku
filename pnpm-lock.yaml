@@ -6,10 +6,8 @@ specifiers:
   '@emotion/styled': ^11.10.4
   '@mui/icons-material': ^5.10.6
   '@mui/material': ^5.10.8
-  '@popperjs/core': 2.11.6
   '@types/react': ^18.0.21
   axios: ^1.0.0
-  bootstrap: ^5.2.2
   eslint: 8.24.0
   eslint-config-next: 12.3.1
   global-react-hooks: ^1.0.1
@@ -27,9 +25,7 @@ dependencies:
   '@emotion/styled': 11.10.4_ogudqqhlstsi7uge4lir7ff3ty
   '@mui/icons-material': 5.10.6_lrxyqjzvf7pkknwtk2aj65ruy4
   '@mui/material': 5.10.8_ikcgkdnp4bn3rgptamntbhbo7e
-  '@popperjs/core': 2.11.6
   axios: 1.0.0
-  bootstrap: 5.2.2_@popperjs+core@2.11.6
   global-react-hooks: 1.0.1_react@18.2.0
   next: 12.3.1_6tziyx3dehkoeijunclpkpolha
   react: 18.2.0
@@ -1017,14 +1013,6 @@ packages:
   /balanced-match/1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
     dev: true
-
-  /bootstrap/5.2.2_@popperjs+core@2.11.6:
-    resolution: {integrity: sha512-dEtzMTV71n6Fhmbg4fYJzQsw1N29hJKO1js5ackCgIpDcGid2ETMGC6zwSYw09v05Y+oRdQ9loC54zB1La3hHQ==}
-    peerDependencies:
-      '@popperjs/core': ^2.11.6
-    dependencies:
-      '@popperjs/core': 2.11.6
-    dev: false
 
   /brace-expansion/1.1.11:
     resolution: {integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==}
