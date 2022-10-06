@@ -15,20 +15,16 @@ export const getStaticProps = async () => {
   };
 };
 
-const Home = ({ data }) => {
-  console.log(data.data);
-
-  return (
-    <Layouts title="Beranda">
-      <Grid container spacing={2}>
-        {data.data.map((item, index) => (
-          <Grid item xs={12} sm={6} md={4} xl={3} key={index}>
-            <CustomCard data={item} />
-          </Grid>
-        ))}
-      </Grid>
-    </Layouts>
-  );
-};
+const Home = ({ data }) => (
+  <Layouts title="Beranda">
+    <Grid container spacing={2}>
+      {data.data.map((item, index) => (
+        <Grid item xs={12} sm={6} md={4} xl={3} key={index}>
+          <CustomCard data={item} />
+        </Grid>
+      ))}
+    </Grid>
+  </Layouts>
+);
 
 export default Home;
