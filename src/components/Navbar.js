@@ -9,6 +9,7 @@ import InputBase from "@mui/material/InputBase";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import { Container } from "@mui/material";
+import Link from "next/link";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -55,7 +56,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 export default function Navbar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed" color="success">
+      <AppBar position="fixed" color="success" sx={{ boxShadow: 0 }}>
         <Container maxWidth="xl">
           <Toolbar>
             <IconButton
@@ -67,14 +68,19 @@ export default function Navbar() {
             >
               <MenuIcon />
             </IconButton>
-            <Typography
-              variant="h6"
-              noWrap
-              component="div"
-              sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-            >
-              Quranku
-            </Typography>
+            <Link href="/">
+              <Typography
+                variant="h6"
+                noWrap
+                sx={{
+                  flexGrow: 1,
+                  display: { xs: "none", sm: "block" },
+                  cursor: "pointer",
+                }}
+              >
+                Quranku
+              </Typography>
+            </Link>
             <Search>
               <SearchIconWrapper>
                 <SearchIcon />

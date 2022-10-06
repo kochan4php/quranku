@@ -3,26 +3,76 @@ import Layouts from "@/layouts";
 import Grid from "@mui/material/Grid";
 import axios from "axios";
 import CustomCard from "@/components/CustomCard";
-
-export const getStaticProps = async () => {
-  const res = await axios.get(SURAH);
-  const data = await res.data;
-
-  return {
-    props: {
-      data,
-    },
-  };
-};
+import { Button } from "@mui/material";
+import Link from "next/link";
 
 const Home = ({ data }) => (
   <Layouts title="Beranda">
     <Grid container spacing={2}>
-      {data.data.map((item, index) => (
-        <Grid item xs={12} sm={6} md={4} xl={3} key={index}>
-          <CustomCard data={item} />
-        </Grid>
-      ))}
+      <Grid item xs={12} sm={6}>
+        <Link href="/surah">
+          <Button
+            fullWidth
+            variant="contained"
+            color="success"
+            sx={{
+              textTransform: "capitalize",
+              boxShadow: 0,
+              "&:hover": { boxShadow: 0 },
+            }}
+          >
+            Surah
+          </Button>
+        </Link>
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <Link href="/">
+          <Button
+            fullWidth
+            variant="contained"
+            color="success"
+            sx={{
+              textTransform: "capitalize",
+              boxShadow: 0,
+              "&:hover": { boxShadow: 0 },
+            }}
+          >
+            Juz
+          </Button>
+        </Link>
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <Link href="/">
+          <Button
+            fullWidth
+            variant="contained"
+            color="success"
+            sx={{
+              textTransform: "capitalize",
+              boxShadow: 0,
+              "&:hover": { boxShadow: 0 },
+            }}
+          >
+            Hadits
+          </Button>
+        </Link>
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <Link href="/">
+          <Button
+            fullWidth
+            variant="contained"
+            color="success"
+            sx={{
+              textTransform: "capitalize",
+              boxShadow: 0,
+              "&:hover": { boxShadow: 0 },
+            }}
+          >
+            Surah
+          </Button>
+        </Link>
+      </Grid>
     </Grid>
   </Layouts>
 );
