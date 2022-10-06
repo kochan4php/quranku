@@ -1,5 +1,6 @@
 import { SURAH } from "@/config";
 import Layouts from "@/layouts";
+import Grid from "@mui/material/Grid";
 import axios from "axios";
 import CustomCard from "@/components/CustomCard";
 
@@ -19,17 +20,13 @@ const Home = ({ data }) => {
 
   return (
     <Layouts title="Beranda">
-      <div className="row">
-        <div className="col">
-          <CustomCard />
-        </div>
-        <div className="col">
-          <CustomCard />
-        </div>
-        <div className="col">
-          <CustomCard />
-        </div>
-      </div>
+      <Grid container spacing={2}>
+        {data.data.map((item, index) => (
+          <Grid item xs={12} sm={6} md={4} xl={3} key={index}>
+            <CustomCard data={item} />
+          </Grid>
+        ))}
+      </Grid>
     </Layouts>
   );
 };

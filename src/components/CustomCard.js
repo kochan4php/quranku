@@ -1,31 +1,57 @@
-import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 
-const CustomCard = () => {
+const CustomCard = ({ data }) => {
+  console.log(data);
   return (
-    <Box sx={{ minWidth: 275 }}>
-      <Card variant="outlined">
-        <CardContent>
-          <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-            Word of the Day
+    <Card variant="outlined">
+      <CardContent sx={{ pb: 1 }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <Typography variant="h5">{data.number}. </Typography>
+          <Typography variant="h4">{data.name.short}</Typography>
+        </div>
+        <div
+          style={{
+            marginBottom: 3,
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <Typography color="text.secondary">
+            {data.name.transliteration.id}
           </Typography>
-          <Typography variant="h5" component="div">
-            Hehehe
+          <Typography color="text.secondary">
+            {data.name.translation.id}
           </Typography>
-          <Typography sx={{ mb: 1.5 }} color="text.secondary">
-            adjective
-          </Typography>
-          <Typography variant="body2">well meaning and kindly.</Typography>
-        </CardContent>
-        <CardActions>
-          <Button size="small">Learn More</Button>
-        </CardActions>
-      </Card>
-    </Box>
+        </div>
+        <Typography variant="body2">
+          {data.revelation.id} ({data.numberOfVerses} Ayat)
+        </Typography>
+        <Button
+          size="small"
+          variant="contained"
+          color="warning"
+          sx={{
+            textTransform: "capitalize",
+            mt: 2,
+            mb: 0,
+            boxShadow: 0,
+            "&:hover": { boxShadow: 0 },
+          }}
+        >
+          Baca
+        </Button>
+      </CardContent>
+    </Card>
   );
 };
 

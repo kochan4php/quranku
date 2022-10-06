@@ -12,7 +12,9 @@ const Layouts = ({ title, children }) => (
       <Navbar />
     </header>
     <main>
-      <Container>{children}</Container>
+      <Container sx={{ mt: 12, mb: 5 }} maxWidth="xl">
+        {children}
+      </Container>
     </main>
   </>
 );

@@ -5,24 +5,6 @@ body {
   font-family: "Lexend Deca", Arial, Helvetica, sans-serif !important;
 }
 
-.navbar .navbar-toggler {
-  border: none !important;
-  outline: none !important;
-}
-
-.navbar-toggler:focus,
-.navbar-toggler:active,
-.navbar-toggler-icon:focus,
-.btn:focus,
-.btn:active,
-.btn-close:focus,
-.btn-close:active,
-.form-control:active,
-.form-control:focus,
-.form-select:active,
-.form-select:focus,
-.form-check-input:active,
-.form-check-input:focus {
-  outline: none !important;
-  box-shadow: none !important;
+.css-14d6vet-MuiCardContent-root:last-child {
+  padding-bottom: 0 !important;
 }
