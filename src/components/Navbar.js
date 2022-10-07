@@ -1,59 +1,34 @@
-import * as React from "react";
-import { styled, alpha } from "@mui/material/styles";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import InputBase from "@mui/material/InputBase";
+import { styledBtn } from "@/styles/styledBtn";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
-import { Container } from "@mui/material";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Container from "@mui/material/Container";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+import IconButton from "@mui/material/IconButton";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import TextField from "@mui/material/TextField";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
 import Link from "next/link";
-
-const Search = styled("div")(({ theme }) => ({
-  position: "relative",
-  borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
-  "&:hover": {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
-  },
-  marginLeft: 0,
-  width: "100%",
-  [theme.breakpoints.up("sm")]: {
-    marginLeft: theme.spacing(1),
-    width: "auto",
-  },
-}));
-
-const SearchIconWrapper = styled("div")(({ theme }) => ({
-  padding: theme.spacing(0, 2),
-  height: "100%",
-  position: "absolute",
-  pointerEvents: "none",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-}));
-
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: "inherit",
-  "& .MuiInputBase-input": {
-    padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create("width"),
-    width: "100%",
-    [theme.breakpoints.up("sm")]: {
-      width: "12ch",
-      "&:focus": {
-        width: "20ch",
-      },
-    },
-  },
-}));
+import { useState } from "react";
 
 export default function Navbar() {
+  const [openDialog, setOpenDialog] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+
+  const handleClickOpenDialog = () => setOpenDialog(true);
+  const handleCloseDialog = () => setOpenDialog(false);
+  const handleClick = (event) => setAnchorEl(event.currentTarget);
+  const handleClose = () => setAnchorEl(null);
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="fixed" color="success" sx={{ boxShadow: 0 }}>
@@ -63,34 +38,79 @@ export default function Navbar() {
               size="large"
               edge="start"
               color="inherit"
-              aria-label="open drawer"
               sx={{ mr: 2 }}
+              onClick={handleClick}
             >
               <MenuIcon />
             </IconButton>
+            <Menu
+              id="basic-menu"
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+              MenuListProps={{
+                "aria-labelledby": "basic-button",
+              }}
+            >
+              <Link href="/">
+                <MenuItem onClick={handleClose}>Profile</MenuItem>
+              </Link>
+              <Link href="/">
+                <MenuItem onClick={handleClose}>Myaccount</MenuItem>
+              </Link>
+              <Link href="/">
+                <MenuItem onClick={handleClose}>Logout</MenuItem>
+              </Link>
+            </Menu>
             <Link href="/">
-              <Typography
-                variant="h6"
-                noWrap
-                sx={{
-                  flexGrow: 1,
-                  display: { xs: "none", sm: "block" },
-                  cursor: "pointer",
-                }}
-              >
+              <Typography variant="h6" sx={{ flexGrow: 1, cursor: "pointer" }}>
                 Quranku
               </Typography>
             </Link>
-            <Search>
-              <SearchIconWrapper>
-                <SearchIcon />
-              </SearchIconWrapper>
-              <StyledInputBase
-                placeholder="Search…"
-                inputProps={{ "aria-label": "search" }}
-                onChange={(e) => console.log(e.target.value)}
-              />
-            </Search>
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              onClick={handleClickOpenDialog}
+            >
+              <SearchIcon />
+            </IconButton>
+            <Dialog open={openDialog} onClose={handleCloseDialog}>
+              <DialogTitle>Cari Surah</DialogTitle>
+              <DialogContent>
+                <DialogContentText>
+                  Cari surah Al-Qur'an yang ingin kamu baca hari ini
+                </DialogContentText>
+                <TextField
+                  autoFocus
+                  margin="dense"
+                  id="search"
+                  label="Cari Surah"
+                  type="search"
+                  fullWidth
+                  variant="standard"
+                  name="search"
+                />
+              </DialogContent>
+              <DialogActions>
+                <Button
+                  onClick={handleCloseDialog}
+                  variant="contained"
+                  color="error"
+                  sx={styledBtn}
+                >
+                  Batalkan
+                </Button>
+                <Button
+                  onClick={handleCloseDialog}
+                  variant="contained"
+                  color="success"
+                  sx={styledBtn}
+                >
+                  Ok
+                </Button>
+              </DialogActions>
+            </Dialog>
           </Toolbar>
         </Container>
       </AppBar>

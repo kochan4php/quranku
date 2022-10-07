@@ -2,12 +2,7 @@ import Layouts from "@/layouts";
 import { Button } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import Link from "next/link";
-
-const styledBtn = {
-  textTransform: "capitalize",
-  boxShadow: 0,
-  "&:hover": { boxShadow: 0 },
-};
+import { styledBtn } from "@/styles/styledBtn";
 
 const Home = () => (
   <Layouts title="Beranda">
