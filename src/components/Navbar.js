@@ -79,7 +79,7 @@ export default function Navbar() {
               <DialogTitle>Cari Surah</DialogTitle>
               <DialogContent>
                 <DialogContentText>
-                  Cari surah Al-Qur'an yang ingin kamu baca hari ini
+                  Cari surah Al-Qur&apos;an yang ingin kamu baca hari ini
                 </DialogContentText>
                 <TextField
                   autoFocus
