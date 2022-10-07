@@ -24,10 +24,10 @@ export default function Navbar() {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
 
-  const handleClickOpenDialog = () => setOpenDialog(true);
+  const handleClickDialog = () => setOpenDialog(true);
   const handleCloseDialog = () => setOpenDialog(false);
-  const handleClick = (event) => setAnchorEl(event.currentTarget);
-  const handleClose = () => setAnchorEl(null);
+  const handleClickMenu = (event) => setAnchorEl(event.currentTarget);
+  const handleCloseMenu = () => setAnchorEl(null);
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -39,7 +39,7 @@ export default function Navbar() {
               edge="start"
               color="inherit"
               sx={{ mr: 2 }}
-              onClick={handleClick}
+              onClick={handleClickMenu}
             >
               <MenuIcon />
             </IconButton>
@@ -47,22 +47,22 @@ export default function Navbar() {
               id="basic-menu"
               anchorEl={anchorEl}
               open={open}
-              onClose={handleClose}
+              onClose={handleCloseMenu}
               MenuListProps={{
                 "aria-labelledby": "basic-button",
               }}
             >
-              <Link href="/">
-                <MenuItem onClick={handleClose}>Surah</MenuItem>
+              <Link href="/surah">
+                <MenuItem onClick={handleCloseMenu}>Surah</MenuItem>
               </Link>
               <Link href="/">
-                <MenuItem onClick={handleClose}>Jadwal Sholat</MenuItem>
+                <MenuItem onClick={handleCloseMenu}>Jadwal Sholat</MenuItem>
               </Link>
               <Link href="/">
-                <MenuItem onClick={handleClose}>Hadits</MenuItem>
+                <MenuItem onClick={handleCloseMenu}>Hadits</MenuItem>
               </Link>
               <Link href="/">
-                <MenuItem onClick={handleClose}>Berita Islami</MenuItem>
+                <MenuItem onClick={handleCloseMenu}>Berita Islami</MenuItem>
               </Link>
             </Menu>
             <Link href="/">
@@ -74,7 +74,7 @@ export default function Navbar() {
               size="large"
               edge="start"
               color="inherit"
-              onClick={handleClickOpenDialog}
+              onClick={handleClickDialog}
             >
               <SearchIcon />
             </IconButton>
