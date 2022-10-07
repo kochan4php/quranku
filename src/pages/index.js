@@ -17,7 +17,7 @@ const Home = () => (
       <Grid item xs={12} sm={6}>
         <Link href="/">
           <Button fullWidth variant="contained" color="success" sx={styledBtn}>
-            Juz
+            Jadwal Sholat
           </Button>
         </Link>
       </Grid>
@@ -31,7 +31,7 @@ const Home = () => (
       <Grid item xs={12} sm={6}>
         <Link href="/">
           <Button fullWidth variant="contained" color="success" sx={styledBtn}>
-            Surah
+            Berita Islami
           </Button>
         </Link>
       </Grid>

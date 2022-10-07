@@ -53,13 +53,16 @@ export default function Navbar() {
               }}
             >
               <Link href="/">
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
+                <MenuItem onClick={handleClose}>Surah</MenuItem>
               </Link>
               <Link href="/">
-                <MenuItem onClick={handleClose}>Myaccount</MenuItem>
+                <MenuItem onClick={handleClose}>Jadwal Sholat</MenuItem>
               </Link>
               <Link href="/">
-                <MenuItem onClick={handleClose}>Logout</MenuItem>
+                <MenuItem onClick={handleClose}>Hadits</MenuItem>
+              </Link>
+              <Link href="/">
+                <MenuItem onClick={handleClose}>Berita Islami</MenuItem>
               </Link>
             </Menu>
             <Link href="/">
