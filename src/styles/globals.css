@@ -8,3 +8,15 @@ body {
 .css-14d6vet-MuiCardContent-root:last-child {
   padding-bottom: 0 !important;
 }
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
