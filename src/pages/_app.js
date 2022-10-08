@@ -1,7 +1,6 @@
 import "@/styles/globals.css";
 import CssBaseline from "@mui/material/CssBaseline";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { RecoilRoot } from "recoil";
 import RecoilNexus from "recoil-nexus";
 
