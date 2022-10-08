@@ -12,7 +12,7 @@ const buttons = [
 ];
 
 const Home = () => (
-  <Layouts title="Beranda" bgimage="/quran.webp">
+  <Layouts title="Beranda" bgimage="/quran-compressed.webp">
     <Grid container spacing={2}>
       {buttons.map(({ title, uri }, index) => (
         <Grid item xs={12} sm={6} key={index}>
