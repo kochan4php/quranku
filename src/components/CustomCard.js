@@ -1,4 +1,5 @@
 import Button from "@mui/material/Button";
+import ButtonGroup from "@mui/material/ButtonGroup";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
@@ -48,32 +49,33 @@ const CustomCard = ({ data }) => {
           <Typography variant="body2">
             {data.revelation.id} ({data.numberOfVerses} Ayat)
           </Typography>
-          <div
+          <ButtonGroup
             style={{
               marginTop: 5,
               marginBottom: 0,
-              display: "flex",
-              gap: 4,
+              width: "100%",
             }}
           >
             <Button
+              fullWidth
               size="small"
               variant="contained"
               color="warning"
-              sx={styledBtnCapitalize}
+              // sx={styledBtnCapitalize}
             >
               Baca
             </Button>
             <Button
+              fullWidth
               size="small"
               variant="contained"
               color="secondary"
-              sx={styledBtnCapitalize}
+              // sx={styledBtnCapitalize}
               onClick={handleClickOpen}
             >
               Tafsir
             </Button>
-          </div>
+          </ButtonGroup>
         </CardContent>
       </Card>
 
