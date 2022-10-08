@@ -92,7 +92,7 @@ const CustomCard = ({ data }) => {
             onClick={handleClose}
             autoFocus
             variant="contained"
-            color="primary"
+            color="error"
             sx={styledBtnCapitalize}
           >
             Tutup
