@@ -2,7 +2,7 @@ import { Container } from "@mui/material";
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
 
-const Layouts = ({ title, children }) => (
+const Layouts = ({ title, children, bgimage }) => (
   <>
     <Head>
       <title>{title} | Quranku</title>
@@ -10,22 +10,34 @@ const Layouts = ({ title, children }) => (
     <div
       style={{
         minHeight: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
+        backgroundImage: `url(${bgimage})` ?? "",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
       }}
     >
-      <header>
-        <Navbar />
-      </header>
-      <main>
-        <Container sx={{ mt: 12, mb: 5 }} maxWidth="xl">
-          {children}
-        </Container>
-      </main>
-      <footer>
-        <Navbar />
-      </footer>
+      <div
+        style={{
+          minHeight: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          backdropFilter: "blur(20px)",
+        }}
+      >
+        <header>
+          <Navbar />
+        </header>
+        <main>
+          <Container sx={{ mt: 12, mb: 5 }} maxWidth="xl">
+            {children}
+          </Container>
+        </main>
+        <footer>
+          <Navbar />
+        </footer>
+      </div>
     </div>
   </>
 );

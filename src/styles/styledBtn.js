@@ -1,5 +1,5 @@
 export const styledBtn = {
-  textTransform: "capitalize",
   boxShadow: 0,
   "&:hover": { boxShadow: 0 },
+  fontSize: "1rem",
 };

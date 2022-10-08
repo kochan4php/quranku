@@ -1,37 +1,42 @@
 import Layouts from "@/layouts";
+import { styledBtn } from "@/styles/styledBtn";
 import { Button } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import Link from "next/link";
-import { styledBtn } from "@/styles/styledBtn";
+
+const buttons = [
+  { title: "Surah", uri: "/surah" },
+  { title: "Hadits", uri: "/" },
+  { title: "Berita Islami", uri: "/" },
+  { title: "Jadwal Sholat", uri: "/" },
+];
 
 const Home = () => (
-  <Layouts title="Beranda">
+  <Layouts title="Beranda" bgimage="/quran.jpg">
     <Grid container spacing={2}>
-      <Grid item xs={12} sm={6}>
-        <Link href="/surah">
-          <Button fullWidth variant="contained" color="success" sx={styledBtn}>
-            Surah
-          </Button>
-        </Link>
-      </Grid>
-      <Grid item xs={12} sm={6}>
+      {buttons.map(({ title, uri }, index) => (
+        <Grid item xs={12} sm={6} key={index}>
+          <Link href={uri}>
+            <Button
+              fullWidth
+              variant="outlined"
+              style={{ color: "white", borderColor: "white" }}
+              sx={styledBtn}
+            >
+              {title}
+            </Button>
+          </Link>
+        </Grid>
+      ))}
+      <Grid item xs={12}>
         <Link href="/">
-          <Button fullWidth variant="contained" color="success" sx={styledBtn}>
-            Jadwal Sholat
-          </Button>
-        </Link>
-      </Grid>
-      <Grid item xs={12} sm={6}>
-        <Link href="/">
-          <Button fullWidth variant="contained" color="success" sx={styledBtn}>
-            Hadits
-          </Button>
-        </Link>
-      </Grid>
-      <Grid item xs={12} sm={6}>
-        <Link href="/">
-          <Button fullWidth variant="contained" color="success" sx={styledBtn}>
-            Berita Islami
+          <Button
+            fullWidth
+            variant="outlined"
+            style={{ color: "white", borderColor: "white" }}
+            sx={styledBtn}
+          >
+            Pengaturan
           </Button>
         </Link>
       </Grid>

@@ -19,7 +19,15 @@ import Typography from "@mui/material/Typography";
 import Link from "next/link";
 import { useState } from "react";
 
-export default function Navbar() {
+const menuItem = [
+  { title: "Beranda", uri: "/" },
+  { title: "Surah", uri: "/surah" },
+  { title: "Hadits", uri: "/" },
+  { title: "Berita Islami", uri: "/" },
+  { title: "Jadwal Sholat", uri: "/" },
+];
+
+const Navbar = () => {
   const [openDialog, setOpenDialog] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -52,18 +60,11 @@ export default function Navbar() {
                 "aria-labelledby": "basic-button",
               }}
             >
-              <Link href="/surah">
-                <MenuItem onClick={handleCloseMenu}>Surah</MenuItem>
-              </Link>
-              <Link href="/">
-                <MenuItem onClick={handleCloseMenu}>Jadwal Sholat</MenuItem>
-              </Link>
-              <Link href="/">
-                <MenuItem onClick={handleCloseMenu}>Hadits</MenuItem>
-              </Link>
-              <Link href="/">
-                <MenuItem onClick={handleCloseMenu}>Berita Islami</MenuItem>
-              </Link>
+              {menuItem.map(({ title, uri }, index) => (
+                <Link href={uri} key={index}>
+                  <MenuItem onClick={handleCloseMenu}>{title}</MenuItem>
+                </Link>
+              ))}
             </Menu>
             <Link href="/">
               <Typography variant="h6" sx={{ flexGrow: 1, cursor: "pointer" }}>
@@ -119,4 +120,6 @@ export default function Navbar() {
       </AppBar>
     </Box>
   );
-}
+};
+
+export default Navbar;
