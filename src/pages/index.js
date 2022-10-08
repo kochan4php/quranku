@@ -1,11 +1,10 @@
+import LogoQuran from "@/assets/quran-logo.webp";
 import LayoutsHomePage from "@/layouts/homepage";
 import { styledBtn } from "@/styles/styled";
 import { Button } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import Image from "next/image";
 import Link from "next/link";
-import BgQuran from "@/assets/quran-compressed.webp";
-import LogoQuran from "@/assets/quran-logo.webp";
 
 const buttons = [
   { title: "Surah", uri: "/surah" },
@@ -15,7 +14,7 @@ const buttons = [
 ];
 
 const Home = () => (
-  <LayoutsHomePage title="Beranda" bgimage={BgQuran}>
+  <LayoutsHomePage title="Beranda" bgimage="/quran-compressed.webp">
     <Grid container spacing={2}>
       <Grid item xs={12} sx={{ mb: 3 }}>
         <Link href="/">
