@@ -50,9 +50,9 @@ const CustomCard = ({ data }) => {
             {data.revelation.id} ({data.numberOfVerses} Ayat)
           </Typography>
           <ButtonGroup
-            style={{
-              marginTop: 5,
-              marginBottom: 0,
+            sx={{
+              mt: 2,
+              mb: 0,
               width: "100%",
             }}
           >
@@ -61,7 +61,7 @@ const CustomCard = ({ data }) => {
               size="small"
               variant="contained"
               color="warning"
-              // sx={styledBtnCapitalize}
+              sx={styledBtnCapitalize}
             >
               Baca
             </Button>
@@ -70,7 +70,7 @@ const CustomCard = ({ data }) => {
               size="small"
               variant="contained"
               color="secondary"
-              // sx={styledBtnCapitalize}
+              sx={styledBtnCapitalize}
               onClick={handleClickOpen}
             >
               Tafsir

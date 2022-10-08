@@ -6,6 +6,7 @@ export const styledBtn = {
 
 export const styledBtnCapitalize = {
   textTransform: "capitalize",
+  fontSize: "0.85rem",
   boxShadow: 0,
   "&:hover": { boxShadow: 0 },
 };
