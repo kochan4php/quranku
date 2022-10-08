@@ -30,7 +30,7 @@ const Layouts = ({ title, children, bgimage }) => (
           <Navbar />
         </header>
         <main>
-          <Container sx={{ mt: 12, mb: 5 }} maxWidth="xl">
+          <Container sx={{ mt: 10, mb: 5 }} maxWidth="xl">
             {children}
           </Container>
         </main>

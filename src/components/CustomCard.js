@@ -36,20 +36,39 @@ const CustomCard = ({ data }) => {
         <Typography variant="body2">
           {data.revelation.id} ({data.numberOfVerses} Ayat)
         </Typography>
-        <Button
-          size="small"
-          variant="contained"
-          color="warning"
-          sx={{
-            textTransform: "capitalize",
-            mt: 2,
-            mb: 0,
-            boxShadow: 0,
-            "&:hover": { boxShadow: 0 },
+        <div
+          style={{
+            marginTop: 5,
+            marginBottom: 0,
+            display: "flex",
+            gap: 4,
           }}
         >
-          Baca
-        </Button>
+          <Button
+            size="small"
+            variant="contained"
+            color="warning"
+            sx={{
+              textTransform: "capitalize",
+              boxShadow: 0,
+              "&:hover": { boxShadow: 0 },
+            }}
+          >
+            Baca
+          </Button>
+          <Button
+            size="small"
+            variant="contained"
+            color="secondary"
+            sx={{
+              textTransform: "capitalize",
+              boxShadow: 0,
+              "&:hover": { boxShadow: 0 },
+            }}
+          >
+            Tafsir
+          </Button>
+        </div>
       </CardContent>
     </Card>
   );
