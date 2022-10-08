@@ -49,18 +49,12 @@ const CustomCard = ({ data }) => {
           <Typography variant="body2">
             {data.revelation.id} ({data.numberOfVerses} Ayat)
           </Typography>
-          <ButtonGroup
-            sx={{
-              mt: 2,
-              mb: 0,
-              width: "100%",
-            }}
-          >
+          <ButtonGroup sx={{ mt: 1, width: "100%" }}>
             <Button
               fullWidth
               size="small"
               variant="contained"
-              color="warning"
+              color="primary"
               sx={styledBtnCapitalize}
             >
               Baca
