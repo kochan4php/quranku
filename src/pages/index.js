@@ -4,6 +4,8 @@ import { Button } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import Image from "next/image";
 import Link from "next/link";
+import BgQuran from "@/assets/quran-compressed.webp";
+import LogoQuran from "@/assets/quran-logo.webp";
 
 const buttons = [
   { title: "Surah", uri: "/surah" },
@@ -13,12 +15,12 @@ const buttons = [
 ];
 
 const Home = () => (
-  <LayoutsHomePage title="Beranda" bgimage="/quran-compressed.webp">
+  <LayoutsHomePage title="Beranda" bgimage={BgQuran}>
     <Grid container spacing={2}>
       <Grid item xs={12} sx={{ mb: 3 }}>
         <Link href="/">
           <div className="flex justify-center">
-            <Image src="/quran-logo.webp" width={85} height={85} />
+            <Image src={LogoQuran} width={85} height={85} />
           </div>
         </Link>
       </Grid>
