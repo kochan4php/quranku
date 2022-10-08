@@ -1,5 +1,5 @@
 import Layouts from "@/layouts";
-import { styledBtn } from "@/styles/styledBtn";
+import { styledBtn } from "@/styles/styled";
 import { Button } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import Link from "next/link";

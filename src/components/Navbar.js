@@ -1,4 +1,4 @@
-import { styledBtn } from "@/styles/styledBtn";
+import { styledBtn } from "@/styles/styled";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import AppBar from "@mui/material/AppBar";
