@@ -18,7 +18,7 @@ const Home = () => (
       <Grid item xs={12} sx={{ mb: 3 }}>
         <Link href="/">
           <div className="flex justify-center">
-            <Image src="/quran.png" width={90} height={90} />
+            <Image src="/quran-logo.webp" width={85} height={85} />
           </div>
         </Link>
       </Grid>
