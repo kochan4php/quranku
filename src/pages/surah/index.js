@@ -1,8 +1,8 @@
+import CustomCard from "@/components/CustomCard";
 import { SURAH } from "@/config";
 import Layouts from "@/layouts";
 import Grid from "@mui/material/Grid";
 import axios from "axios";
-import CustomCard from "@/components/CustomCard";
 
 export const getStaticProps = async () => {
   const res = await axios.get(SURAH);

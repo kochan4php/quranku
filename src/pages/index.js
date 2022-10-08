@@ -1,4 +1,4 @@
-import Layouts from "@/layouts";
+import LayoutsHomePage from "@/layouts/homepage";
 import { styledBtn } from "@/styles/styled";
 import { Button } from "@mui/material";
 import Grid from "@mui/material/Grid";
@@ -13,12 +13,12 @@ const buttons = [
 ];
 
 const Home = () => (
-  <Layouts title="Beranda" bgimage="/quran-compressed.webp">
+  <LayoutsHomePage title="Beranda" bgimage="/quran-compressed.webp">
     <Grid container spacing={2}>
-      <Grid item xs={12} justifyContent="center">
+      <Grid item xs={12} sx={{ mb: 3 }}>
         <Link href="/">
           <div className="flex justify-center">
-            <Image src="/quran.png" width={100} height={100} />
+            <Image src="/quran.png" width={90} height={90} />
           </div>
         </Link>
       </Grid>
@@ -49,7 +49,7 @@ const Home = () => (
         </Link>
       </Grid>
     </Grid>
-  </Layouts>
+  </LayoutsHomePage>
 );
 
 export default Home;

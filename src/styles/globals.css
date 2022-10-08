@@ -5,8 +5,8 @@ body {
   font-family: "Lexend Deca", Arial, Helvetica, sans-serif !important;
 }
 
-.css-14d6vet-MuiCardContent-root:last-child {
-  padding-bottom: 0 !important;
+.font-lexend {
+  font-family: "Lexend Deca" !important;
 }
 
 .flex {
@@ -17,6 +17,18 @@ body {
   justify-content: center;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
 .items-center {
   align-items: center;
+}
+
+.min-h-screen {
+  min-height: 100vh;
 }

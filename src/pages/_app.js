@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
+import CssBaseline from "@mui/material/CssBaseline";
 import { RecoilRoot } from "recoil";
 import RecoilNexus from "recoil-nexus";
-import CssBaseline from "@mui/material/CssBaseline";
 
 const MyApp = ({ Component, pageProps }) => (
   <RecoilRoot>

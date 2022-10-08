@@ -1,15 +1,15 @@
+import { styledBtnCapitalize } from "@/styles/styled";
 import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
+import Typography from "@mui/material/Typography";
 import { useState } from "react";
-import { styledBtnCapitalize } from "@/styles/styled";
 
 const CustomCard = ({ data }) => {
   const [open, setOpen] = useState(false);
