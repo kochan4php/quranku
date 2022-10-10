@@ -9,6 +9,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import Typography from "@mui/material/Typography";
+import Link from "next/link";
 import { useState } from "react";
 
 const CustomCard = ({ data }) => {
@@ -50,15 +51,17 @@ const CustomCard = ({ data }) => {
             {data.revelation.id} ({data.numberOfVerses} Ayat)
           </Typography>
           <ButtonGroup sx={{ mt: 1, width: "100%" }}>
-            <Button
-              fullWidth
-              size="small"
-              variant="contained"
-              color="primary"
-              sx={styledBtnCapitalize}
-            >
-              Baca
-            </Button>
+            <Link href={`/surah/${data.number}`}>
+              <Button
+                fullWidth
+                size="small"
+                variant="contained"
+                color="primary"
+                sx={styledBtnCapitalize}
+              >
+                Baca
+              </Button>
+            </Link>
             <Button
               fullWidth
               size="small"

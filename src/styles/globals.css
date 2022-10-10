@@ -5,6 +5,10 @@ body {
   font-family: "Lexend Deca", Arial, Helvetica, sans-serif !important;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .font-lexend {
   font-family: "Lexend Deca" !important;
 }
