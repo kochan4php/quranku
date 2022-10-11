@@ -14,12 +14,12 @@ const buttons = [
 ];
 
 const Home = () => (
-  <LayoutsHomePage title="Beranda" bgimage="/quran-compressed.webp">
+  <LayoutsHomePage title="Beranda" >
     <Grid container spacing={2}>
       <Grid item xs={12} sx={{ mb: 3 }}>
         <Link href="/">
           <div className="flex justify-center">
-            <Image src={LogoQuran} width={85} height={85} />
+            <Image src={LogoQuran} width={85} height={85} alt="Logo Quran" />
           </div>
         </Link>
       </Grid>
