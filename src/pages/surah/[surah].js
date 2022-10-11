@@ -43,18 +43,15 @@ const ReadSurah = ({ data }) => (
         <Grid item xs={12} key={index}>
           <Card variant="outlined">
             <CardContent sx={{ pb: 1 }}>
-              <div
-                className="flex justify-between items-center"
-                style={{ gap: 10 }}
-              >
-                <Typography align="left" variant="h6">
+              <div className="flex justify-between" style={{ gap: 4 }}>
+                <Typography align="left" variant="h6" sx={{ mt: 0.5 }}>
                   {item?.number?.inSurah}.
                 </Typography>
                 <Typography align="right" sx={{ fontSize: "2.1rem" }}>
                   {item?.text?.arab}
                 </Typography>
               </div>
-              <Typography align="center" color="text.secondary" sx={{ mt: 3 }}>
+              <Typography color="text.secondary" sx={{ mt: 3 }}>
                 {item?.translation?.id}
               </Typography>
             </CardContent>
