@@ -51,6 +51,13 @@ const ReadSurah = ({ data }) => {
                 <Typography align="center" variant="h4">
                   {data?.preBismillah?.text?.arab}
                 </Typography>
+                <Typography
+                  align="center"
+                  color="text.secondary"
+                  sx={{ mt: 3 }}
+                >
+                  {data?.preBismillah?.translation?.id}
+                </Typography>
               </CardContent>
             </Card>
           </Grid>
@@ -63,10 +70,10 @@ const ReadSurah = ({ data }) => {
                   className="flex justify-between items-center"
                   style={{ gap: 10 }}
                 >
-                  <Typography align="left" variant="h5">
+                  <Typography align="left" variant="h6">
                     {item?.number?.inSurah}.
                   </Typography>
-                  <Typography align="right" variant="h4">
+                  <Typography align="right" sx={{ fontSize: "2.1rem" }}>
                     {item?.text?.arab}
                   </Typography>
                 </div>

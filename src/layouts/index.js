@@ -11,7 +11,7 @@ const Layouts = ({ title, children }) => (
       <Navbar />
     </header>
     <main>
-      <Container sx={{ mt: 11, mb: 2 }} maxWidth="xl">
+      <Container sx={{ mt: 10, mb: 3 }} maxWidth="xl">
         {children}
       </Container>
     </main>
