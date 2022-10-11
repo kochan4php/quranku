@@ -36,11 +36,11 @@ const ReadSurah = ({ data }) => {
   console.log(data);
 
   return (
-    <Layouts title={data.name.transliteration.id}>
+    <Layouts title={data?.name?.transliteration?.id}>
       <Card variant="outlined">
         <CardContent sx={{ pb: 1 }}>
           <Typography variant="h4" align="center">
-            {data.name.transliteration.id}
+            {data?.name?.transliteration?.id}
           </Typography>
         </CardContent>
       </Card>
