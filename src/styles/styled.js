@@ -19,3 +19,5 @@ export const fixedBottomPosition = {
   left: 0,
   right: 0,
 };
+
+export const whiteColor = { color: "#fff !important" };
