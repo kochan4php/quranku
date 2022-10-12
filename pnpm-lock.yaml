@@ -12,7 +12,7 @@ specifiers:
   eslint-config-next: 12.3.1
   global-react-hooks: ^1.0.1
   next: 12.3.1
-  nprogress: ^0.2.0
+  nextjs-progressbar: ^0.0.15
   react: 18.2.0
   react-awesome-reveal: ^4.0.1
   react-dom: 18.2.0
@@ -30,7 +30,7 @@ dependencies:
   axios: 1.0.0
   global-react-hooks: 1.0.1_react@18.2.0
   next: 12.3.1_6tziyx3dehkoeijunclpkpolha
-  nprogress: 0.2.0
+  nextjs-progressbar: 0.0.15_next@12.3.1+react@18.2.0
   react: 18.2.0
   react-awesome-reveal: 4.0.1_gyryel6m34lsxtsejhafetjriq
   react-dom: 18.2.0_react@18.2.0
@@ -797,6 +797,10 @@ packages:
   /@types/json5/0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: true
+
+  /@types/nprogress/0.2.0:
+    resolution: {integrity: sha512-1cYJrqq9GezNFPsWTZpFut/d4CjpZqA0vhqDUPFWYKF1oIyBz5qnoYMzR+0C/T96t3ebLAC1SSnwrVOm5/j74A==}
+    dev: false
 
   /@types/parse-json/4.0.0:
     resolution: {integrity: sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==}
@@ -2242,6 +2246,19 @@ packages:
     transitivePeerDependencies:
       - '@babel/core'
       - babel-plugin-macros
+    dev: false
+
+  /nextjs-progressbar/0.0.15_next@12.3.1+react@18.2.0:
+    resolution: {integrity: sha512-ZA3btbuD6y/PylGdA7U7wbpLDe9N1esYEF6nwn5SsGQA6jkZ4EmT+TcjVcpOWTMdgZqy5G/FxKIBU69yLoGSTw==}
+    peerDependencies:
+      next: '>= 6.0.0'
+      react: '>= 16.0.0'
+    dependencies:
+      '@types/nprogress': 0.2.0
+      next: 12.3.1_6tziyx3dehkoeijunclpkpolha
+      nprogress: 0.2.0
+      prop-types: 15.8.1
+      react: 18.2.0
     dev: false
 
   /node-abi/3.26.0:
