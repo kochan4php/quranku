@@ -9,10 +9,12 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import Typography from "@mui/material/Typography";
-import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
 
 const CustomCard = ({ data }) => {
+  const router = useRouter();
+
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => setOpen(true);
@@ -51,17 +53,16 @@ const CustomCard = ({ data }) => {
             {data.revelation.id} ({data.numberOfVerses} Ayat)
           </Typography>
           <ButtonGroup sx={{ mt: 1, width: "100%" }}>
-            <Link href={`/surah/${data.number}`}>
-              <Button
-                fullWidth
-                size="small"
-                variant="contained"
-                color="primary"
-                sx={styledBtnCapitalize}
-              >
-                Baca
-              </Button>
-            </Link>
+            <Button
+              fullWidth
+              size="small"
+              variant="contained"
+              color="primary"
+              sx={styledBtnCapitalize}
+              onClick={() => router.push(`/surah/${data.number}`)}
+            >
+              Baca
+            </Button>
             <Button
               fullWidth
               size="small"

@@ -11,3 +11,11 @@ export const styledBtnCapitalize = {
   boxShadow: 0,
   "&:hover": { boxShadow: 0 },
 };
+
+export const fixedBottomPosition = {
+  bgcolor: "#2E7D32",
+  position: "fixed",
+  bottom: 0,
+  left: 0,
+  right: 0,
+};

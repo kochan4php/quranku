@@ -1,5 +1,6 @@
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import { Container } from "@mui/material";
+import Container from "@mui/material/Container";
 import Head from "next/head";
 
 const Layouts = ({ title, children }) => (
@@ -11,10 +12,13 @@ const Layouts = ({ title, children }) => (
       <Navbar />
     </header>
     <main>
-      <Container sx={{ mt: 10, mb: 3 }} maxWidth="xl">
+      <Container sx={{ mt: 10, mb: 10 }} maxWidth="xl">
         {children}
       </Container>
     </main>
+    <footer>
+      <Footer />
+    </footer>
   </>
 );
 
