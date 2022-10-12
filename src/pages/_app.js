@@ -6,7 +6,7 @@ import RecoilNexus from "recoil-nexus";
 
 const MyApp = ({ Component, pageProps }) => (
   <RecoilRoot>
-    <NextNProgress color="#FFC500" height={3} />
+    <NextNProgress color="#FFC500" />
     <CssBaseline />
     <RecoilNexus />
     <Component {...pageProps} />
