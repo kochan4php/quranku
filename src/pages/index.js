@@ -7,14 +7,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 const buttons = [
-  { title: "Surah", uri: "/surah" },
-  { title: "Hadits", uri: "/" },
-  { title: "Berita Islami", uri: "/" },
-  { title: "Jadwal Sholat", uri: "/" },
+  { title: "Surah Al-Qur'an", uri: "/surah" },
+  { title: "Niat Sholat", uri: "/surah" },
+  { title: "Asmaul Husna", uri: "/surah" },
+  { title: "Doa Doa Harian", uri: "/surah" },
 ];
 
 const Home = () => (
-  <LayoutsHomePage title="Beranda" >
+  <LayoutsHomePage title="Beranda">
     <Grid container spacing={2}>
       <Grid item xs={12} sx={{ mb: 3 }}>
         <Link href="/">
@@ -45,7 +45,7 @@ const Home = () => (
             style={{ color: "white", borderColor: "white" }}
             sx={styledBtn}
           >
-            Pengaturan
+            Terakhir Dibaca
           </Button>
         </Link>
       </Grid>

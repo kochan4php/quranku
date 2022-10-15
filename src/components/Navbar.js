@@ -21,10 +21,10 @@ import { useState } from "react";
 
 const menuItem = [
   { title: "Beranda", uri: "/" },
-  { title: "Surah", uri: "/surah" },
-  { title: "Hadits", uri: "/" },
-  { title: "Doa-doa Harian", uri: "/" },
-  { title: "Asmaul Husna", uri: "/" },
+  { title: "Surah Al-Qur'an", uri: "/surah" },
+  { title: "Niat Sholat", uri: "/surah" },
+  { title: "Asmaul Husna", uri: "/surah" },
+  { title: "Doa Doa Harian", uri: "/surah" },
 ];
 
 const Navbar = () => {

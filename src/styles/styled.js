@@ -1,7 +1,7 @@
 export const styledBtn = {
   boxShadow: 0,
   "&:hover": { boxShadow: 0 },
-  fontSize: "1rem",
+  fontSize: "0.95rem",
   letterSpacing: "1.4px",
 };
 
