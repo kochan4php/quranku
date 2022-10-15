@@ -23,8 +23,8 @@ const menuItem = [
   { title: "Beranda", uri: "/" },
   { title: "Surah", uri: "/surah" },
   { title: "Hadits", uri: "/" },
-  { title: "Berita Islami", uri: "/" },
-  { title: "Jadwal Sholat", uri: "/" },
+  { title: "Doa-doa Harian", uri: "/" },
+  { title: "Asmaul Husna", uri: "/" },
 ];
 
 const Navbar = () => {

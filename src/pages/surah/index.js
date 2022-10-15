@@ -20,7 +20,7 @@ const Surah = ({ data }) => (
     <Grid container spacing={2}>
       <Grid item xs={12}>
         <Typography variant="h4" align="center" sx={{ mb: 1 }}>
-          Surah Al Quran
+          Al Quran
         </Typography>
       </Grid>
       {data.map((item, index) => (

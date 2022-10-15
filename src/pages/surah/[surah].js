@@ -54,7 +54,7 @@ const ReadSurah = ({ data }) => {
               <CardHeader
                 sx={{ p: 1 }}
                 title={
-                  <Typography align="center" variant="body1">
+                  <Typography align="center" variant="subtitle1">
                     Ayat {item?.number?.inSurah}
                   </Typography>
                 }
