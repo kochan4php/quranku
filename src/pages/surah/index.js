@@ -3,6 +3,7 @@ import { SURAH } from "@/config";
 import Layouts from "@/layouts";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
+import { memo } from "react";
 
 export const getStaticProps = async () => {
   const res = await fetch(SURAH);
@@ -32,4 +33,4 @@ const Surah = ({ data }) => (
   </Layouts>
 );
 
-export default Surah;
+export default memo(Surah);
