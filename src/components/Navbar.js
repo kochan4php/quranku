@@ -23,7 +23,7 @@ const menuItem = [
   { title: "Beranda", uri: "/" },
   { title: "Surah Al-Qur'an", uri: "/surah" },
   { title: "Niat Sholat", uri: "/surah" },
-  { title: "Asmaul Husna", uri: "/surah" },
+  { title: "Asmaul Husna", uri: "/asmaul-husna" },
   { title: "Doa Doa Harian", uri: "/surah" },
 ];
 
