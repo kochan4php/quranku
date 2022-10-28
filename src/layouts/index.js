@@ -5,7 +5,7 @@ import Head from "next/head";
 const Layouts = ({ title, children }) => (
   <>
     <Head>
-      <title>{title} | Quranku</title>
+      <title>{`${title} | Quranku`}</title>
     </Head>
     <header>
       <Navbar />

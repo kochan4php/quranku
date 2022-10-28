@@ -1,3 +1,5 @@
+import { use } from "react";
+import { useRouter } from "next/router";
 import { SURAH } from "@/config";
 import Layouts from "@/layouts";
 import Card from "@mui/material/Card";
@@ -20,8 +22,6 @@ export const getServerSideProps = async (context) => {
 };
 
 const ReadSurah = ({ data }) => {
-  console.log(data);
-
   return (
     <Layouts title={data?.name?.transliteration?.id}>
       <Grid container spacing={2}>
