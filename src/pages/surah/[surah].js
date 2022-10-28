@@ -1,13 +1,12 @@
-import { use } from "react";
-import { useRouter } from "next/router";
 import { SURAH } from "@/config";
 import Layouts from "@/layouts";
 import Card from "@mui/material/Card";
-import CardHeader from "@mui/material/CardHeader";
 import CardContent from "@mui/material/CardContent";
+import CardHeader from "@mui/material/CardHeader";
+import Divider from "@mui/material/Divider";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import Divider from "@mui/material/Divider";
+import { CardActionArea } from "@mui/material";
 
 export const getServerSideProps = async (context) => {
   const surah = context.params.surah;
@@ -51,45 +50,47 @@ const ReadSurah = ({ data }) => {
         {data?.verses?.map((item, index) => (
           <Grid item xs={12} key={index}>
             <Card variant="outlined">
-              <CardHeader
-                sx={{ p: 1 }}
-                title={
-                  <Typography align="center" variant="subtitle1">
-                    Ayat {item?.number?.inSurah}
+              <CardActionArea>
+                <CardHeader
+                  sx={{ p: 1 }}
+                  title={
+                    <Typography align="center" variant="subtitle1">
+                      Ayat {item?.number?.inSurah}
+                    </Typography>
+                  }
+                />
+                <Divider />
+                <CardContent>
+                  <Typography
+                    align="right"
+                    sx={{
+                      fontSize: {
+                        xs: "2.4rem",
+                        sm: "2.5rem",
+                        md: "2.6rem",
+                        lg: "2.7rem",
+                        xl: "3.1rem",
+                      },
+                    }}
+                  >
+                    {item?.text?.arab}
                   </Typography>
-                }
-              />
-              <Divider />
-              <CardContent>
-                <Typography
-                  align="right"
-                  sx={{
-                    fontSize: {
-                      xs: "2.4rem",
-                      sm: "2.5rem",
-                      md: "2.6rem",
-                      lg: "2.7rem",
-                      xl: "3.1rem",
-                    },
-                  }}
-                >
-                  {item?.text?.arab}
-                </Typography>
-                <Typography
-                  color="text.secondary"
-                  sx={{
-                    mt: 3.5,
-                    fontSize: {
-                      xs: "1rem",
-                      sm: "1.1rem",
-                      md: "1.2rem",
-                      lg: "1.25rem",
-                    },
-                  }}
-                >
-                  {item?.translation?.id}
-                </Typography>
-              </CardContent>
+                  <Typography
+                    color="text.secondary"
+                    sx={{
+                      mt: 3.5,
+                      fontSize: {
+                        xs: "1rem",
+                        sm: "1.1rem",
+                        md: "1.2rem",
+                        lg: "1.25rem",
+                      },
+                    }}
+                  >
+                    {item?.translation?.id}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
             </Card>
           </Grid>
         ))}
