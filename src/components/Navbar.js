@@ -22,9 +22,9 @@ import { useState } from "react";
 const menuItem = [
   { title: "Beranda", uri: "/" },
   { title: "Surah Al-Qur'an", uri: "/surah" },
-  { title: "Niat Sholat", uri: "/surah" },
+  { title: "Niat Sholat", uri: "/niat-sholat" },
   { title: "Asmaul Husna", uri: "/asmaul-husna" },
-  { title: "Doa Doa Harian", uri: "/surah" },
+  { title: "Doa Doa Harian", uri: "/doa-doa-harian" },
 ];
 
 const Navbar = () => {
