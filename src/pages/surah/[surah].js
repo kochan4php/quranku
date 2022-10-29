@@ -50,7 +50,7 @@ const ReadSurah = ({ data }) => {
         {data?.verses?.map((item, index) => (
           <Grid item xs={12} key={index}>
             <Card variant="outlined">
-              <CardActionArea>
+              <CardActionArea sx={{ cursor: "default", pointerEvents: "none" }}>
                 <CardHeader
                   sx={{ p: 1 }}
                   title={
