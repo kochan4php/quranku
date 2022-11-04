@@ -144,6 +144,12 @@ class MyDocument extends Document {
             content="https://img.icons8.com/external-others-bzzricon-studio/100/000000/external-quran-ramadan-others-bzzricon-studio-2.png"
           />
           <meta name="msapplication-TileColor" content="#C0FFEE"></meta>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@500&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />

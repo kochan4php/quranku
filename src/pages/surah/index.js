@@ -20,7 +20,7 @@ const Surah = ({ data }) => (
   <Layouts title="Surah">
     <Grid container spacing={2}>
       <Grid item xs={12}>
-        <Typography variant="h4" align="center" sx={{ mb: 1 }}>
+        <Typography variant="h4" align="center" sx={{ mb: 1, mt: 0.5 }}>
           Al Quran
         </Typography>
       </Grid>

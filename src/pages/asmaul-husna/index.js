@@ -18,16 +18,16 @@ const customFontSize = {
 
 const AsmaulHusna = () => (
   <Layouts title="Asmaul Husna">
-    <Grid container spacing={2}>
+    <Grid container spacing={3}>
       <Grid item xs={12}>
-        <Typography variant="h4" align="center" sx={{ mb: 1 }}>
+        <Typography variant="h4" align="center" sx={{ mb: 1, mt: 0.5 }}>
           Asmaul Husna
         </Typography>
       </Grid>
       {data.map((item, index) => (
         <Grid item xs={12} sm={6} md={4} xl={3} key={index}>
           <Card variant="outlined">
-            <CardActionArea>
+            <CardActionArea sx={{ cursor: "default", pointerEvents: "none" }}>
               <CardContent>
                 <div
                   style={{ marginBottom: 3 }}
