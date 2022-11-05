@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const buttons = [
   { title: "Surah Al-Qur'an", uri: "/surah" },
-  { title: "Niat Sholat", uri: "/surah" },
+  { title: "Niat Sholat", uri: "/niat-sholat" },
   { title: "Asmaul Husna", uri: "/asmaul-husna" },
   { title: "Doa Doa Harian", uri: "/surah" },
 ];

@@ -8,7 +8,7 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 
-export const getServerSideProps = async (context) => {
+export async function getServerSideProps(context) {
   const surah = context.params.surah;
   const res = await fetch(`${SURAH}/${surah}`);
   const data = await res.json();
@@ -18,9 +18,9 @@ export const getServerSideProps = async (context) => {
       data: data.data,
     },
   };
-};
+}
 
-const ReadSurah = ({ data }) => {
+export default function ReadSurah({ data }) {
   return (
     <Layouts title={data?.name?.transliteration?.id}>
       <Grid container spacing={2}>
@@ -97,6 +97,4 @@ const ReadSurah = ({ data }) => {
       </Grid>
     </Layouts>
   );
-};
-
-export default ReadSurah;
+}
