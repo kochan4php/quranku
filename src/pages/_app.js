@@ -4,13 +4,13 @@ import NextNProgress from "nextjs-progressbar";
 import { RecoilRoot } from "recoil";
 import RecoilNexus from "recoil-nexus";
 
-const MyApp = ({ Component, pageProps }) => (
-  <RecoilRoot>
-    <NextNProgress color="#FFC500" />
-    <CssBaseline />
-    <RecoilNexus />
-    <Component {...pageProps} />
-  </RecoilRoot>
-);
-
-export default MyApp;
+export default function MyApp({ Component, pageProps }) {
+  return (
+    <RecoilRoot>
+      <NextNProgress color="#FFC500" />
+      <CssBaseline />
+      <RecoilNexus />
+      <Component {...pageProps} />
+    </RecoilRoot>
+  );
+}

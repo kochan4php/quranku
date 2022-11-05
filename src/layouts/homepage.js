@@ -1,18 +1,19 @@
 import { Container } from "@mui/material";
 import Head from "next/head";
+import { memo } from "react";
 
-const LayoutsHomePage = ({ title, children }) => (
-  <>
-    <Head>
-      <title>{title} | Quranku</title>
-    </Head>
-    <main
-      className="min-h-screen flex justify-center items-center"
-      style={{ backgroundColor: "black" }}
-    >
-      <Container maxWidth="xl">{children}</Container>
-    </main>
-  </>
-);
-
-export default LayoutsHomePage;
+export default memo(function LayoutsHomePage({ title, children }) {
+  return (
+    <>
+      <Head>
+        <title>{title} | Quranku</title>
+      </Head>
+      <main
+        className="min-h-screen flex justify-center items-center"
+        style={{ backgroundColor: "black" }}
+      >
+        <Container maxWidth="xl">{children}</Container>
+      </main>
+    </>
+  );
+});

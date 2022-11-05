@@ -16,7 +16,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function Surah({ data }) {
+export default memo(function Surah({ data }) {
   return (
     <Layouts title="Surah">
       <Grid container spacing={2}>
@@ -33,4 +33,4 @@ export default function Surah({ data }) {
       </Grid>
     </Layouts>
   );
-}
+});

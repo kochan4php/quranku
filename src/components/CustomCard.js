@@ -10,9 +10,9 @@ import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import Typography from "@mui/material/Typography";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { memo, useState } from "react";
 
-const CustomCard = ({ data }) => {
+export default memo(function CustomCard({ data }) {
   const router = useRouter();
 
   const [open, setOpen] = useState(false);
@@ -105,6 +105,4 @@ const CustomCard = ({ data }) => {
       </Dialog>
     </>
   );
-};
-
-export default CustomCard;
+});

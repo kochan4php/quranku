@@ -19,7 +19,7 @@ import {
 } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import Link from "next/link";
-import { useState } from "react";
+import { memo, useState } from "react";
 
 const menuItem = [
   { title: "Beranda", uri: "/" },
@@ -29,7 +29,7 @@ const menuItem = [
   { title: "Doa Doa Harian", uri: "/doa-doa-harian" },
 ];
 
-const Navbar = () => {
+export default memo(function Navbar() {
   const [openDialog, setOpenDialog] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -122,6 +122,4 @@ const Navbar = () => {
       </AppBar>
     </Box>
   );
-};
-
-export default Navbar;
+});
