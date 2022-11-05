@@ -12,5 +12,5 @@ export async function getStaticProps() {
 export default memo(function NiatSholat({ data }) {
   console.log(data);
 
-  return <Layouts>Hello</Layouts>;
+  return <Layouts title="Niat Sholat">Hello</Layouts>;
 });
